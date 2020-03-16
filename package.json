@@ -1,0 +1,62 @@
+{
+  "name": "use-background-image",
+  "description": "useBackgroundImage: for loading background images with just one tiny hook!",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "homepage": "https://github.com/daphnesmit/use-background-image#readme",
+  "author": "Daphne Smit",
+  "keywords": [
+    "react",
+    "react-use",
+    "hook",
+    "hooks",
+    "background",
+    "background-image",
+    "image",
+    "useBackground",
+    "useBackgroundImage",
+    "daphne"
+  ],
+  "contributors": [
+    {
+      "name": "Daphne Smit",
+      "email": "daphnesmit1986@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daphnesmit/use-background-image"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "husky": "^4.2.3",
+    "prettier": "^1.19.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  }
+}
