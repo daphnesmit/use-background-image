@@ -16,7 +16,7 @@ This small hook provides the very basic functionality of:
 
 Check out the `/example` directory for a full fletched example of the hook.
 
-```
+```typescript
 const { src, isLoading, hasError } = useBackgroundImage({
   src: 'https://source.unsplash.com/weekly?water',
   placeholder: '[[ insert smaller version or placeholder here ]]'
