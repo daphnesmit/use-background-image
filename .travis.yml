@@ -1,0 +1,36 @@
+language: node_js
+
+node_js:
+  - '12'
+
+jobs:
+  include:
+    - stage: "Test"             
+      name: "Run tests"            # names the first Tests stage job
+      script:
+        - npm run test
+
+    - stage: "Deploy"
+      name: "Build example"
+      before_deploy:
+        - cd example 
+        - npm install 
+        - npm run build
+      name: "Deploy to surge.sh"
+      deploy:
+        provider: surge
+        project: ./example/dist
+        domain: use-background-image.surge.sh
+        skip_cleanup: true
+        on:
+          branch: master
+
+    - stage: "Release"
+      name: "Release to NPM"
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
+        on:
+          branch: master
