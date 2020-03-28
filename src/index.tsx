@@ -7,7 +7,7 @@ interface State {
 }
 
 interface ActionisLoading {
-  type: 'isLoading'
+  type: 'SUCCESS'
   src: string
 }
 
@@ -20,11 +20,11 @@ type Action = ActionisLoading | ActionError
 
 const reducer = (state: State, action: Action) => {
   switch (action.type) {
-    case 'isLoading':
+    case 'SUCCESS':
       return {
         ...state,
         src: action.src,
-        isLoading: true,
+        isLoading: false,
         hasError: false,
       }
     case 'ERROR':
@@ -42,7 +42,7 @@ const reducer = (state: State, action: Action) => {
 const spacer = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
 
 const initialState = (placeholder: string): State => ({
-  isLoading: false,
+  isLoading: true,
   hasError: false,
   src: placeholder,
 })
@@ -57,7 +57,7 @@ export function useBackgroundImage({ src, placeholder = spacer }: UseBackgroundI
 
   React.useEffect(() => {
     let image: HTMLImageElement = new Image()
-    image.onload = () => dispatch({ type: 'isLoading', src })
+    image.onload = () => dispatch({ type: 'SUCCESS', src })
     image.onerror = () => dispatch({ type: 'ERROR', src: placeholder })
     image.src = src
 

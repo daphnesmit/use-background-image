@@ -1,9 +1,9 @@
-import 'react-app-polyfill/ie11';
-import 'normalize.css';
-import './css/loader.css';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { useBackgroundImage } from '../src';
+import 'react-app-polyfill/ie11'
+import 'normalize.css'
+import './css/loader.css'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { useBackgroundImage } from '../src'
 
 const Loader = () => (
   <div
@@ -12,18 +12,17 @@ const Loader = () => (
       top: '50%',
       left: '50%',
       transform: 'translate3d(-50%,-50%,0)',
-    }}
-  >
+    }}>
     <div className="loader" />
   </div>
-);
+)
 
 const App = () => {
   const { src, isLoading, hasError } = useBackgroundImage({
-    src: 'https://source.unsplash.com/weekly?water',
-  });
+    src: 'https://www.cornify.com/assets/cornify-the-experience.jpg',
+  })
 
-  if (isLoading) return <Loader />;
+  if (isLoading) return <Loader />
 
   return (
     <div
@@ -33,8 +32,7 @@ const App = () => {
         backgroundPosition: 'center center',
         fontFamily: 'Arial, Verdana',
         height: '100vh',
-      }}
-    >
+      }}>
       <div
         style={{
           width: '500px',
@@ -43,8 +41,7 @@ const App = () => {
           margin: 'auto',
           padding: '20px',
           background: 'rgba(255, 255, 255, 0.3)',
-        }}
-      >
+        }}>
         <h1>This is a Hero with a Background Image</h1>
         <ol>
           <li>
@@ -59,7 +56,7 @@ const App = () => {
         </ol>
       </div>
     </div>
-  );
-};
+  )
+}
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))

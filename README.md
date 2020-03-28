@@ -1,4 +1,7 @@
 # 🎨 Loading background images with just one tiny hook!
+[![Build Status](https://travis-ci.com/daphnesmit/use-background-image.svg?branch=master)](https://travis-ci.com/daphnesmit/use-background-image)
+![GitHub issues](https://img.shields.io/github/issues/daphnesmit/use-background-image)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Working with full-screen background images can be difficult, they are slow to load and especially when you have a hero image you want them to display immediatly or show a placeholder instead.
 Of course you can lazy load them using one of the many lazy loading utils out there on NPM. 
