@@ -1,5 +1,5 @@
 # 🎨 Loading background images with just one tiny hook!
-[![Build Status](https://travis-ci.com/daphnesmit/use-background-image.svg?branch=master)](https://travis-ci.com/daphnesmit/use-background-image)
+[![Build Status](https://travis-ci.org/daphnesmit/use-background-image.svg?branch=master)](https://travis-ci.org/daphnesmit/use-background-image)
 ![GitHub issues](https://img.shields.io/github/issues/daphnesmit/use-background-image)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
