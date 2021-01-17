@@ -58,7 +58,8 @@
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "husky": {
     "hooks": {
@@ -77,6 +78,7 @@
     "@types/react-dom": "^17.0.0",
     "husky": "^4.3.8",
     "prettier": "^2.2.1",
+    "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "semantic-release": "^17.3.3",
     "tsdx": "^0.14.1",
