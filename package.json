@@ -32,6 +32,21 @@
   "files": [
     "dist"
   ],
+  "release": {
+    "branches": [
+      "master",
+      {
+        "name": "develop",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator"
+    ]
+  },
   "scripts": {
     "commitmsg": "npx commitlint -e $GIT_PARAMS",
     "commit": "commit",
@@ -53,20 +68,19 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-angular": "^8.3.4",
-    "@commitlint/prompt": "^8.3.5",
-    "@commitlint/prompt-cli": "^8.3.5",
-    "@types/jest": "^25.1.4",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
-    "husky": "^4.2.3",
-    "prettier": "^1.19.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "semantic-release": "^17.0.4",
-    "tsdx": "^0.12.3",
-    "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-angular": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
+    "@commitlint/prompt-cli": "^11.0.0",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "husky": "^4.3.8",
+    "prettier": "^2.2.1",
+    "react-dom": "^17.0.1",
+    "semantic-release": "^17.3.3",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
   }
 }
